@@ -1,0 +1,16 @@
+<app-image-viewer [imageURL]="cam1.getStreamUrl()" [open]="fullscreenView" (closeEvent)="fullscreenView = false"></app-image-viewer>
+<div>
+    <div class="image-container" (click)="fullscreenView = true">
+        <img [src]="cam1.getStreamUrl()"/>
+    </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Resolution</mat-label>
+        <mat-select [(value)]="selectedRes" (selectionChange)="changeResolution($event.value)">
+            <mat-option *ngFor="let resolution of resolutions"
+                        [value]="resolution.key"
+            >{{resolution.value}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+

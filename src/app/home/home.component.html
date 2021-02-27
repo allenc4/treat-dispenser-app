@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngIf="!isAuthenticated">
+        <h1>Please login to interact with application</h1>
+    </div>
+    <div *ngIf="isAuthenticated">
+        <div class="action-container">
+            <button mat-raised-button color="primary" (click)="dispense()" [disabled]="isInDispense">Dispense Treat</button>
+            <div class="spinner" *ngIf="isInDispense"><mat-spinner [diameter]="25"></mat-spinner></div>
+            <span class="error-message" *ngIf="actionErrMsg !== ''">{{actionErrMsg}}</span>
+        </div>
+        <app-camera></app-camera>
+    </div>
+
+</div>

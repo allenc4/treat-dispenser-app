@@ -1,0 +1,22 @@
+.container {
+  margin: 5px;
+  text-align: center;
+}
+.action-container {
+  padding: 10px;
+
+  .spinner {
+    margin-left: 10px;
+    padding-left: 10px;
+    display: inline-block;
+    position: absolute;
+  }
+
+  .error-message {
+    color: #e4000e;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+  }
+}

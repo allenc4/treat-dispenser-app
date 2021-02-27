@@ -1,0 +1,6 @@
+<div *ngIf="open" class="viewer-container">
+    <div class="viewer-content">
+        <fa-icon icon="times-circle" class="close-viewer" (click)="closeEvent.emit()"></fa-icon>
+        <img class="main-img" [src]="imageURL"/>
+    </div>
+</div>
